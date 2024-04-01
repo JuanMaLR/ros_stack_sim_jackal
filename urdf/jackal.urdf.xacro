@@ -29,7 +29,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
         <geometry>
-          <mesh filename="package://jackal_velodyne_vlp16_lidar_ros_nav_stack/meshes/jackal-wheel.dae"/>
+          <mesh filename="package://ros_stack_sim_jackal/meshes/jackal-wheel.dae"/>
         </geometry>
         <material name="black" />
       </visual>
@@ -99,7 +99,7 @@
     <visual>
       <origin xyz="0 0 ${footprint_vertical_offset}" rpy="${PI/2} 0 ${PI/2}"/>
       <geometry>
-        <mesh filename="package://jackal_velodyne_vlp16_lidar_ros_nav_stack/meshes/jackal-base.dae"/>
+        <mesh filename="package://ros_stack_sim_jackal/meshes/jackal-base.dae"/>
       </geometry>
       <material name="dark_grey" />
     </visual>
@@ -125,7 +125,7 @@
     <visual>
       <origin xyz="0 0 ${footprint_vertical_offset}" rpy="${PI/2} 0 ${PI/2}"/>
       <geometry>
-        <mesh filename="package://jackal_velodyne_vlp16_lidar_ros_nav_stack/meshes/jackal-fenders.dae"/>
+        <mesh filename="package://ros_stack_sim_jackal/meshes/jackal-fenders.dae"/>
       </geometry>
       <material name="yellow" />
     </visual>
@@ -189,12 +189,12 @@
   </joint>
 
   <!-- Bring in simulation data for Gazebo. -->
-  <xacro:include filename="$(find jackal_velodyne_vlp16_lidar_ros_nav_stack)/urdf/jackal.gazebo" />
+  <xacro:include filename="$(find ros_stack_sim_jackal)/urdf/jackal.gazebo" />
 
   <!-- Optional standard accessories, including their simulation data. The rendering
        of these into the final description is controlled by optenv variables, which
        default each one to off.-->
-  <xacro:include filename="$(find jackal_velodyne_vlp16_lidar_ros_nav_stack)/urdf/accessories.urdf.xacro" />
+  <xacro:include filename="$(find ros_stack_sim_jackal)/urdf/accessories.urdf.xacro" />
 
   <!-- Optional custom includes. -->
   <xacro:if value="$(optenv JACKAL_URDF_EXTRAS 0)">

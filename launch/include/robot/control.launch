@@ -2,7 +2,7 @@
 <launch>
 
   <!-- Load the control.yaml file to ROS parameters so that they can be enabled beneath -->
-  <rosparam command="load" file="$(find jackal_velodyne_vlp16_lidar_ros_nav_stack)/configs/control.yaml" />
+  <rosparam command="load" file="$(find ros_stack_sim_jackal)/configs/control.yaml" />
 
   <!-- Enable ROS controllers 
   Jackal joint publisher for non-fixed TF transforms 
@@ -15,7 +15,7 @@
 
   <!-- Sensors fusion to improve odometry against real life noise -->
   <!--<node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
-      <rosparam command="load" file="$(find jackal_velodyne_vlp16_lidar_ros_nav_stack)/configs/robot_localization.yaml" />
+      <rosparam command="load" file="$(find ros_stack_sim_jackal)/configs/robot_localization.yaml" />
     </node>-->
 
   <!-- If no remap was done in the move_base node, a relay will be needed.

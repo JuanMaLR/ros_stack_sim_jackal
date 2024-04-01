@@ -110,7 +110,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES jackal_velodyne_vlp16_lidar_ros_nav_stack
+#  LIBRARIES ros_stack_sim_jackal
 #  CATKIN_DEPENDS geometry_msgs nav_msg pcl_conversions pcl_ros roscpp rospy sensor_msgs
 #  DEPENDS system_lib
 )
@@ -132,7 +132,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/jackal_velodyne_vlp16_lidar_ros_nav_stack.cpp
+#   src/${PROJECT_NAME}/ros_stack_sim_jackal.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -143,7 +143,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/jackal_velodyne_vlp16_lidar_ros_nav_stack_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/ros_stack_sim_jackal_node.cpp)
 #add_executable(floor_removal src/floor_removal.cpp)
 #add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
 
@@ -211,7 +211,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_jackal_velodyne_vlp16_lidar_ros_nav_stack.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_ros_stack_sim_jackal.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
